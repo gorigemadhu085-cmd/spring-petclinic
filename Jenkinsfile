@@ -13,7 +13,7 @@ pipeline {
         stage('Build & Sonar Scan') {
             steps {
                 withSonarQubeEnv('SONAR') {
-                    withCredentials([string(credentialsId: 'sonar_id', variable: 'SONAR_TOKEN')]) {
+                    withCredentials([string(credentialsId:'sonar_id', variable:'SONAR_TOKEN')]) {
                         sh '''
                         mvn clean verify sonar:sonar \
                         -Dsonar.projectKey=gorigemadhu085-cmd_spring-petclinic \
