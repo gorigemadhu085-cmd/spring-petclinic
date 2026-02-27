@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                checkout scm
-            }
+                git url : 'https://github.com/gorigemadhu085-cmd/spring-petclinic.git',
+                    branch : 'main'
+                    } 
+            
         }
 
         stage('Build & Sonar Scan') {
