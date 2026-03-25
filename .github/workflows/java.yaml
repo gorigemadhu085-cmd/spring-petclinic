@@ -21,4 +21,4 @@ jobs:
           SONAR_TAKEN: $({secrets.SONAR_TOKEN})
           SONAR_HOST_URL: $({secrets.SONAR_HOST_URL})
         run:
-          mvn -B verify org.sonar-source.scanner.maven:sonar-plugin:5.5.0.6356:sonar -Dsonar.projectKey=gorigemadhu085-cmd_spring-petclinic
+          mvn -B verify org.sonarsource.scanner.maven:sonar-plugin:5.5.0.6356:sonar -Dsonar.projectKey=gorigemadhu085-cmd_spring-petclinic
